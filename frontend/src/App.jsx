@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { PieChart, Pie, Cell, Tooltip, BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from "recharts"
 import "./App.css"
 
-const API = "http://127.0.0.1:8000"
+const API = "https://asx-portfolio-platform-production.up.railway.app"
 const PIE_COLORS = ["#00C49F","#0088FE","#FFBB28","#FF8042","#a855f7","#ec4899"]
 
 function App() {
