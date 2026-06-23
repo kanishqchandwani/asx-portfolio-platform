@@ -22,8 +22,13 @@ app.add_middleware(
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
 def load_prices():
-    df = pd.read_csv("data/asx_prices.csv", index_col=0, parse_dates=True)
-    prices = df.pivot_table(index="Date", columns="Ticker", values="Close")
+    import yfinance as yf
+    ASX_WATCHLIST = [
+        "CBA.AX","BHP.AX","CSL.AX","NAB.AX","WBC.AX",
+        "ANZ.AX","WES.AX","MQG.AX","SUN.AX","QAN.AX"
+    ]
+    data = yf.download(ASX_WATCHLIST, period="1y", auto_adjust=True, progress=False)
+    prices = data["Close"]
     prices.index = pd.to_datetime(prices.index, utc=True)
     return prices
 
