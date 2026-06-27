@@ -152,4 +152,23 @@ code {
   .pred-direction {
     font-size: 12px;
   }
+  html,
+  body,
+  .app {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .full-width {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .table {
+    min-width: 380px;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
