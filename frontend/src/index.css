@@ -110,9 +110,16 @@ code {
   background: var(--code-bg);
 }
 @media (max-width: 768px) {
+  html,
+  body {
+    max-width: 100%;
+  }
+
   .main {
     grid-template-columns: 1fr;
     padding: 12px 16px;
+    width: 100%;
+    overflow: hidden;
   }
 
   .header {
@@ -128,6 +135,18 @@ code {
 
   .metrics-row {
     flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .full-width {
+    overflow-x: auto;
+  }
+
+  .table {
+    min-width: 380px;
   }
 
   .predictions-grid {
@@ -151,24 +170,5 @@ code {
   }
   .pred-direction {
     font-size: 12px;
-  }
-  html,
-  body,
-  .app {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  .full-width {
-    overflow-x: auto;
-    width: 100%;
-  }
-
-  .table {
-    min-width: 380px;
-  }
-
-  .card {
-    width: 100%;
   }
 }
